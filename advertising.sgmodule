@@ -10,5 +10,7 @@
 # > 网上国网（倒计时还在）
 ^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg - reject-200
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
+# > 高铁管家
+^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver reject
 [MITM]
-hostname = %APPEND% mbs.boc.cn,m.creditcard.ecitic.com,list-app-m.i4.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn
+hostname = %APPEND% mbs.boc.cn,m.creditcard.ecitic.com,list-app-m.i4.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,rsscc.com
