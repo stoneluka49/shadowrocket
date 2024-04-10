@@ -9,5 +9,6 @@
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
 # > 网上国网（倒计时还在）
 ^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg - reject-200
+^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
 [MITM]
 hostname = %APPEND% mbs.boc.cn,m.creditcard.ecitic.com,list-app-m.i4.cn,osg-static.sgcc.com.cn
