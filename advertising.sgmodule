@@ -1,5 +1,8 @@
 #!name=APP去广告
 #!desc=转换自其他大佬规则
+[Rule]
+#NGA论坛
+DOMAIN-SUFFIX,img4.nga.178.com,REJECT
 [Url Rewrite]
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
