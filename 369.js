@@ -13,7 +13,7 @@
     "theme" : {
       "enableWxLogin" : true,
       "themeMainType" : 0,
-      "themeId" : 5,
+      "themeId" : 0,
       "themeUrl" : "https:\/\/jngj.369cx.cn\/theme\/Version7xx\/",
       "themeColor" : "#1e73ff",
       "bannerAdEnable" : false,
@@ -27,10 +27,6 @@
       "splashId" : 2494,
       "picUrl" : ""
     },
-    "targetUrl" : "",
-    "name" : "禁止携带电动车",
-    "type" : 0
-  },
   "status" : {
     "msg" : "成功",
     "code" : 0
