@@ -4,9 +4,6 @@
 #NGA论坛
 DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
-[Script]
-# > 369出行
-type=http-response, pattern=^https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd,script-path=https://github.com/stoneluka49/shadowrocket/blob/main/369.js,requires-body=true, binary-body-mode=true
 [Url Rewrite]
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
@@ -37,4 +34,4 @@ type=http-response, pattern=^https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd,
 # > 百度网盘_会员权益@ddgksf2013
 ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 [MITM]
-hostname = %APPEND% mbs.boc.cn,api.369cx.cn,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,jp.rsscc.com, jt.rsscc.com, cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,pan.baidu.com,*mbasecc.b*s.cmbchina.com, intellicc.b*s.cmbchina.com
+hostname = %APPEND% mbs.boc.cn,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,jp.rsscc.com, jt.rsscc.com, cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,pan.baidu.com,*mbasecc.b*s.cmbchina.com, intellicc.b*s.cmbchina.com
