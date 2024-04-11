@@ -4,7 +4,6 @@
 #NGA论坛
 DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
-DOMAIN-SUFFIX,img4.nga.178.com,REJECT
 [Url Rewrite]
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
