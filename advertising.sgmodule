@@ -18,7 +18,7 @@ DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 # > NGA论坛
 ^https?:\/\/img\.nga\.178\.com\/attachments  - reject
 # > 369出行
-^https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd url reject-200
+;^https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd url reject-200
 # > 高铁管家 - GTGJ
 ^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver url reject
 ^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 url reject-dict
