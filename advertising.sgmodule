@@ -17,6 +17,8 @@ DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject 
 # > NGA论坛
 ^https?:\/\/img\.nga\.178\.com\/attachments  - reject
+# > 369出行
+^https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd url reject-200
 # > 高铁管家 - GTGJ
 ^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver url reject
 ^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 url reject-dict
@@ -34,4 +36,4 @@ DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 # > 百度网盘_会员权益@ddgksf2013
 ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 [MITM]
-hostname = %APPEND% mbs.boc.cn,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,jp.rsscc.com, jt.rsscc.com, cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,pan.baidu.com,*mbasecc.b*s.cmbchina.com, intellicc.b*s.cmbchina.com
+hostname = %APPEND% mbs.boc.cn,api.369cx.cn,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,jp.rsscc.com, jt.rsscc.com, cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,pan.baidu.com,*mbasecc.b*s.cmbchina.com, intellicc.b*s.cmbchina.com
