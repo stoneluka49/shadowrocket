@@ -2,6 +2,7 @@
 #!desc=转换自其他大佬规则
 [Rule]
 #NGA论坛
+DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 DOMAIN-SUFFIX,img4.nga.178.com,REJECT
 [Url Rewrite]
