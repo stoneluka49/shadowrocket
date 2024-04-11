@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 [Script]
 # >369出行
-369出行 = type=http-response,pattern="https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd",requires-body=1,max-size=0,script-path=https://github.com/stoneluka49/shadowrocket/blob/main/369.js,script-update-interval=0
+369出行 = type=http-response,pattern="https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd",requires-body=1,max-size=0,script-path=https://limbopro.com/Adguard/Adblock4limbo.js,script-update-interval=0
 [Url Rewrite]
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
