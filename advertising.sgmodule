@@ -7,8 +7,6 @@ DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 [Url Rewrite]
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
-# >369出行
-http-response, pattern=^https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd\/  requires-body=1,max-size=0,script-path=https://github.com/stoneluka49/shadowrocket/blob/main/369.js
 # > 动卡空间（3秒倒计时还在）
 ^https?:\/\/m\.creditcard\.ecitic\.com\/citiccard\/mbk\/appspace-getway\/getWay\/dkkj-system-web\/system\/v\d\/init-config url reject-200
 # > 掌上生活
@@ -19,6 +17,8 @@ http-response, pattern=^https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd\/  re
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject 
 # > NGA论坛
 ^https?:\/\/img\.nga\.178\.com\/attachments  - reject
+# > PIXIV论坛
+pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
 # > 高铁管家 - GTGJ
 ^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver url reject
 ^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 url reject-dict  
@@ -36,4 +36,4 @@ http-response, pattern=^https?:\/\/api\.369cx\.cn\/v2\/Splash\/GetSplashAd\/  re
 # > 百度网盘_会员权益@ddgksf2013
 ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 [MITM]
-hostname = %APPEND% mbs.boc.cn,api.369cx.cn,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,jp.rsscc.com, jt.rsscc.com, cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,pan.baidu.com,*mbasecc.b*s.cmbchina.com, intellicc.b*s.cmbchina.com
+hostname = %APPEND% mbs.boc.cn,api.369cx.cn,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,oauth.secure.pixiv.net,jp.rsscc.com,jt.rsscc.com, cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,pan.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com
