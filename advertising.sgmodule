@@ -4,6 +4,9 @@
 #NGA论坛
 DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
+[Script]
+# > PIXIV论坛
+pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
 [Url Rewrite]
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
@@ -17,8 +20,6 @@ DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject 
 # > NGA论坛
 ^https?:\/\/img\.nga\.178\.com\/attachments  - reject
-# > PIXIV论坛
-pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
 # > 高铁管家 - GTGJ
 ^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver url reject
 ^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 url reject-dict  
