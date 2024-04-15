@@ -30,6 +30,7 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 # > 百度网盘
 ^http?:\/\/rp\.hpplay\.cn\/logouts  reject
 ^https:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+/banner.png  reject
+^https:\/\/staticsns\.cdn\.bcebos\.com\/amis\? reject
 ^https:\/\/pan\.baidu\.com\/rest\/2.0\/pcs\/adv\? - reject
 ^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx reject
 ^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject-200
