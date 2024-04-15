@@ -25,6 +25,23 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 # > 网上国网（倒计时还在）
 ^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg - reject-200
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
+# > 百度网盘
+^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx reject
+^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject-200
+^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject
+^https?:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx reject
+^https?:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info reject
+^https?:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip reject
+^https?:\/\/pan\.baidu\.com\/api\/useractivity\/activity reject
+^https?:\/\/pan\.baidu\.com\/api\/certuser\/get reject
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject-200
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject
+^https?:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list reject
+^https?://pan\.baidu\.com/act/v\d/(bchannel|welfare)/list reject
+^https?://pan\.baidu\.com/act/api/activityentry reject
+^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/|rest\/2\.0\/pcs\/ad) reject-dict
 # > 百度网盘_设置信息流@ddgksf2013
 ^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list url reject-200
 # > 百度网盘_通用广告@ddgksf2013
