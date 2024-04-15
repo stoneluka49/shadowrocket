@@ -24,6 +24,7 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject 
 # > 滴滴
 ^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg - reject
+^https?:\/\/img-ys011\.didistatic\.com  -reject
 # > NGA论坛
 ^https?:\/\/img\.nga\.178\.com\/attachments  - reject
 # > 网上国网（倒计时还在）
