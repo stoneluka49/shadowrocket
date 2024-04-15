@@ -26,6 +26,7 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 ^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg - reject-200
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
 # 百度网盘广告屏蔽
+^https?:\/\/pan\.baidu\.com\/aipic\/image\/story\/taskquery\?  reject-200
 http:\/\/rp\.hpplay\.cn\/logouts _ reject
 https:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info _ reject
 https:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx _ reject
