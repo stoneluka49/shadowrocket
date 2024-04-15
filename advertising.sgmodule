@@ -40,8 +40,6 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 ^https?:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip reject
 ^https?:\/\/pan\.baidu\.com\/api\/useractivity\/activity reject
 ^https?:\/\/pan\.baidu\.com\/api\/certuser\/get reject
-^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject-200
-^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject
 ^https?:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list reject
