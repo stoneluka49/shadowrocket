@@ -5,7 +5,7 @@
 DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 # > 滴滴
-DOMAIN-SUFFIX,img-*.didistatic.com,reject
+DOMAIN-SUFFIX,*.didistatic.com,reject
 # > 百度网盘
 DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 [Script]
