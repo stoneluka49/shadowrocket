@@ -5,7 +5,24 @@
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
 # > ADguard 高级权限 --author=@chxm1023
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/AdGuard.js
+# > 滴滴出行
+Didichuxing=type=http-response,pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing2=type=http-response,pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing3=type=http-response,pattern=^https?:\/\/freight\.xiaojukeji\.com\/gateway,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing4=type=http-response,pattern=^https?:\/\/daijia\.kuaidadi\.com\/gateway,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing5=type=http-response,pattern=^https?:\/\/daijia\.kuaidadi\.com:443\/gateway,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing6=type=http-response,pattern=^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing7=type=http-response,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing8=type=http-response,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing9=type=http-response,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+Didichuxing10=type=http-response,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+didi=type=http-response,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5,requires-body=1,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js
 [Url Rewrite]
+# > 滴滴青桔
+^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) - reject-200
+^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api - reject-200
+^https?:\/\/omgup*\.xiaojukeji\.com\/api - reject-200
+^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
 # > 动卡空间（3秒倒计时还在）
@@ -16,14 +33,6 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 ^https?:\/\/intellicc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId url reject-drop
 # > 爱思助手
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject 
-# > 滴滴 > 小桔科技 > 青桔
-^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) reject-200
-^https?:\/\/img*\.didistatic\.com\/static\/ad_oss\/.*.jpg - reject
-^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) - reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
-^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api - reject-200
-^https?:\/\/omgup*\.xiaojukeji\.com\/api - reject-200
 # > NGA论坛
 ^https?:\/\/img\.nga\.178\.com\/attachments  - reject
 # > 网上国网（倒计时还在）
@@ -88,4 +97,4 @@ DOMAIN-SUFFIX,didistatic.com,reject-drop
 DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 [MITM]
 hostname = %APPEND% mbs.boc.cn,mobile-api.adguard.org,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com,
-rp.hpplay.cn,*.didistatic.com,*.xiaojukeji.com
+rp.hpplay.cn,*.didistatic.com,*.xiaojukeji.com,*.diditaxi.com.cn
