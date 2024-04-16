@@ -1,22 +1,16 @@
 #!name=APP去广告
 #!desc=转换自其他大佬规则
+[Rule]
+#NGA论坛
+DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
+DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
+# > 百度网盘
+DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 [Script]
 # > PIXIV论坛@ddgksf2013
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
 # > ADguard 高级权限 --author=@chxm1023
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/AdGuard.js
-# > 滴滴出行
-Didichuxing=type=http-response,pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing2=type=http-response,pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing3=type=http-response,pattern=^https?:\/\/freight\.xiaojukeji\.com\/gateway,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing4=type=http-response,pattern=^https?:\/\/daijia\.kuaidadi\.com\/gateway,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing5=type=http-response,pattern=^https?:\/\/daijia\.kuaidadi\.com:443\/gateway,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing6=type=http-response,pattern=^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing7=type=http-response,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing8=type=http-response,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing9=type=http-response,pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-Didichuxing10=type=http-response,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me,requires-body=1,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
-didi=type=http-response,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5,requires-body=1,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js
 [Url Rewrite]
 # > 滴滴青桔
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) - reject-200
@@ -88,12 +82,6 @@ didi=type=http-response,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-200
 # > 百度网盘_会员权益@ddgksf2013
 ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
-[Rule]
-#NGA论坛
-DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
-DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
-# > 百度网盘
-DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 [MITM]
 hostname = %APPEND% mbs.boc.cn,mobile-api.adguard.org,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com,
 rp.hpplay.cn,*.didistatic.com,*.xiaojukeji.com,*.diditaxi.com.cn
