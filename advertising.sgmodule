@@ -20,6 +20,7 @@ didi=type=http-response,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v
 [Url Rewrite]
 # > 滴滴青桔
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) - reject-200
+^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg - reject
 ^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api - reject-200
 ^https?:\/\/omgup*\.xiaojukeji\.com\/api - reject-200
 ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
@@ -91,8 +92,6 @@ didi=type=http-response,pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v
 #NGA论坛
 DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
-# > 滴滴
-DOMAIN-SUFFIX,didistatic.com,reject-drop
 # > 百度网盘
 DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 [MITM]
