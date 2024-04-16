@@ -9,6 +9,7 @@ DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 # > 滴滴
 DOMAIN-SUFFIX,img-ys011.didistatic.com,REJECT-DROP
 DOMAIN-SUFFIX,aliyuncs.com,REJECT-DROP
+DOMAIN-SUFFIX,omgup.xiaojukeji.com,reject-200
 [Script]
 # > PIXIV论坛@ddgksf2013
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
@@ -17,8 +18,6 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 [Url Rewrite]
 # > 滴滴青桔
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) - reject-200
-^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com - reject-200
-^https?:\/\/omgup*\.xiaojukeji\.com - reject-200
 ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
