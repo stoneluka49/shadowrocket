@@ -16,8 +16,8 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 [Url Rewrite]
 # > 滴滴青桔
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) - reject-200
-^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api - reject-200
-^https?:\/\/omgup*\.xiaojukeji\.com\/api - reject-200
+^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com - reject-200
+^https?:\/\/omgup*\.xiaojukeji\.com - reject-200
 ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
