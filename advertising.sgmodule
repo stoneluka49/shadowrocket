@@ -19,6 +19,19 @@ DOMAIN-SUFFIX,pt-starimg.didistatic.com,reject-200
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
 # > ADguard 高级权限 --author=@chxm1023
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/AdGuard.js
+# > 滴滴
+Didichuxing = type=http-response, pattern=^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/daijia\.kuaidadi\.com\/gateway, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/freight\.xiaojukeji\.com\/gateway, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/daijia\.kuaidadi\.com:443\/gateway, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/api\.udache\.com\/gulfstream\/pre-sale\/v1\/other\/pGetSceneList, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
+Didichuxing = type=http-response, pattern=^https:\/\/conf\.diditaxi\.com\.cn\/ota\/na\/yuantu\/infoList, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
 [Url Rewrite]
 # > 滴滴青桔
 ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
@@ -89,4 +102,4 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 [MITM]
 hostname = %APPEND% mbs.boc.cn,mobile-api.adguard.org,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com,
-rp.hpplay.cn,*.didistatic.com,*.xiaojukeji.com,*.diditaxi.com.cn
+rp.hpplay.cn,*.didistatic.com,*.xiaojukeji.com,*.diditaxi.com.cn,daijia.kuaidadi.com
