@@ -9,7 +9,7 @@ DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 # > 滴滴
 DOMAIN-SUFFIX,aliyuncs.com,REJECT-DROP
 DOMAIN-SUFFIX,gwp.xiaojukeji.com,REJECT-DROP
-DOMAIN-SUFFIX,pt-starimg.didistatic.com,reject-200
+# DOMAIN-SUFFIX,pt-starimg.didistatic.com,reject-200
 [Script]
 # > PIXIV论坛@ddgksf2013
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
