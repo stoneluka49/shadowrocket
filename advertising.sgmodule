@@ -9,6 +9,7 @@ DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 # > 滴滴
 DOMAIN-SUFFIX,img-ys011.didistatic.com,REJECT-DROP
 DOMAIN-SUFFIX,aliyuncs.com,REJECT-DROP
+DOMAIN-SUFFIX,gwp.xiaojukeji.com,REJECT-DROP
 DOMAIN-SUFFIX,omgup.xiaojukeji.com,reject-200
 DOMAIN-SUFFIX,omgup1.xiaojukeji.com,reject-200
 DOMAIN-SUFFIX,omgup2.xiaojukeji.com,reject-200
@@ -21,6 +22,7 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 [Url Rewrite]
 # > 滴滴青桔
 ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
+^https:\/\/hd\.xiaojukeji\.com\/d url reject-dict
 # > 中国银行
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-200
 # > 动卡空间（3秒倒计时还在）
