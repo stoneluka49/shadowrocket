@@ -6,6 +6,8 @@ DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
 # > 百度网盘
 DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
+# > 我的天气
+DOMAIN-SUFFIX,pic.yupoo.com,REJECT-DICT
 # > 滴滴
 DOMAIN-SUFFIX,gwp.xiaojukeji.com,REJECT-DROP
 [Script]
