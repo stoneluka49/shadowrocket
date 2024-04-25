@@ -1,5 +1,17 @@
 #!name=APP去广告
 #!desc=转换自其他大佬规则
+[Rule]
+#NGA论坛
+DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
+DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
+# > 百度网盘
+DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
+# > 我的天气
+DOMAIN-SUFFIX,pic.yupoo.com,REJECT-DICT
+# > 滴滴
+DOMAIN-SUFFIX,gwp.xiaojukeji.com,REJECT-DROP
+# > 网上国网
+DOMAIN-SUFFIX,osg-service.sgcc.com.cn,REJECT-DICT
 [Script]
 # > PIXIV论坛@ddgksf2013
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
