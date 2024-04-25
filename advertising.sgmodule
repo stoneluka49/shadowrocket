@@ -1,15 +1,5 @@
 #!name=APP去广告
 #!desc=转换自其他大佬规则
-[Rule]
-#NGA论坛
-DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
-DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
-# > 百度网盘
-DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
-# > 我的天气
-DOMAIN-SUFFIX,pic.yupoo.com,REJECT-DICT
-# > 滴滴
-DOMAIN-SUFFIX,gwp.xiaojukeji.com,REJECT-DROP
 [Script]
 # > PIXIV论坛@ddgksf2013
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
@@ -30,7 +20,6 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 ^https?:\/\/img\.nga\.178\.com\/attachments  - reject
 # > 网上国网（倒计时还在）
 ^https?:\/\/osg-static\.sgcc\.com\.cn\/omg-static\/.*.jpg - reject-200
-^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
 # > 百度
 ^https?:\/\/fcvbjbcebos.baidu.com\/.+.mp4 - reject
 ^https?:\/\/cover.baidu.com\/cover\/page\/dspSwitchAds\/ - reject
@@ -81,4 +70,4 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 # > 百度网盘_会员权益@ddgksf2013
 ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 [MITM]
-hostname = %APPEND% mbs.boc.cn,mobile-api.adguard.org,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,osg-static.sgcc.com.cn,osg-service.sgcc.com.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com
+hostname = %APPEND% mbs.boc.cn,mobile-api.adguard.org,nga.178.com,m.creditcard.ecitic.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,osg-static.sgcc.com.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com
