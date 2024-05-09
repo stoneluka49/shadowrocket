@@ -10,6 +10,8 @@ DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 DOMAIN-SUFFIX,pic.yupoo.com,REJECT-DICT
 # > 滴滴
 DOMAIN-SUFFIX,gwp.xiaojukeji.com,REJECT-DROP
+ip-cidr,123.207.209.39/32,REJECT-DROP
+ip-cidr,123.207.209.60/32,REJECT-DROP
 [Script]
 # > PIXIV论坛@ddgksf2013
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
