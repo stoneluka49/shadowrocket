@@ -90,16 +90,13 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 # 微信小程序个人中心净化 感谢【TEXAS】分享
 ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js
 # > 滴滴青桔
-# hostname = pt-starimg.didistatic.com, omgup*.xiaojukeji.com
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) url reject-200
 ^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api url reject-200
 # > 滴滴代驾小程序
-# hostname = daijia.kuaidadi.com, as.xiaojukeji.com
 # 横幅广告
 ^https?:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= url reject-dict
 ^https?:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe url reject-dict
 # > 嘀嗒出行
-# hostname = capis*.didapinche.com, adx-cn.anythinktech.com, www.didapinche.com
 # 小程序净化
 ^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
 ^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ url reject
@@ -120,4 +117,4 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 # > 拼多多
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
 [MITM]
-hostname = %APPEND%  api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com, gw.alicdn.com,heic.alicdn.com,asp.cntv.myalicdn.com,res.xiaojukeji.com,common.diditaxi.com.cn,hd.xiaojukeji.com,freight.xiaojukeji.com,daijia.kuaidadi.com,ct.xiaojukeji.com,conf.diditaxi.com.cn,mbs.boc.cn,mobile-api.adguard.org,nga.178.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com
+hostname = %APPEND%  capis*.didapinche.com, adx-cn.anythinktech.com, www.didapinche.com, daijia.kuaidadi.com, as.xiaojukeji.com, pt-starimg.didistatic.com, omgup*.xiaojukeji.com, api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com, gw.alicdn.com,heic.alicdn.com,asp.cntv.myalicdn.com,res.xiaojukeji.com,common.diditaxi.com.cn,hd.xiaojukeji.com,freight.xiaojukeji.com,daijia.kuaidadi.com,ct.xiaojukeji.com,conf.diditaxi.com.cn,mbs.boc.cn,mobile-api.adguard.org,nga.178.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com
