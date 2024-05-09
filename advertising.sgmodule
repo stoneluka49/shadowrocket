@@ -75,5 +75,49 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-200
 # > 百度网盘_会员权益@ddgksf2013
 ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
+# > 滴滴出行
+^https?:\/\/hd\.xiaojukeji\.com\/d url reject-dict
+^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/freight\.xiaojukeji\.com\/gateway url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/daijia\.kuaidadi\.com\/gateway url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+^https?:\/\/daijia\.kuaidadi\.com:443\/gateway url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
+# 微信小程序个人中心净化 感谢【TEXAS】分享
+^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js
+# > 滴滴青桔
+# hostname = pt-starimg.didistatic.com, omgup*.xiaojukeji.com
+^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) url reject-200
+^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api url reject-200
+# > 滴滴代驾小程序
+# hostname = daijia.kuaidadi.com, as.xiaojukeji.com
+# 横幅广告
+^https?:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= url reject-dict
+^https?:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe url reject-dict
+# > 嘀嗒出行
+# hostname = capis*.didapinche.com, adx-cn.anythinktech.com, www.didapinche.com
+# 小程序净化
+^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
+^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ url reject
+^https?:\/\/adx-cn\.anythinktech\.com\/bid url reject-dict
+^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade url reject-dict
+^https?:\/\/www\.didapinche\.com\/app\/adstat\/ url reject-200
+# > 闲鱼
+^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ url reject-200
+^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} url reject-200
+^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ url reject-200
+^https?:\/\/asp\.cntv\.myalicdn\.com\/.+?\?maxbr=850 url reject-200
+^https?:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}$ url reject-200
+^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) url reject
+^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ url reject
+^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) url reject
+^https?:\/\/gw\.alicdn\.com\/mt\/ url reject
+^https?:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} url reject
+# > 拼多多
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
 [MITM]
-hostname = %APPEND% mbs.boc.cn,mobile-api.adguard.org,nga.178.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com
+hostname = %APPEND%  api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com, gw.alicdn.com,heic.alicdn.com,asp.cntv.myalicdn.com,res.xiaojukeji.com,common.diditaxi.com.cn,hd.xiaojukeji.com,freight.xiaojukeji.com,daijia.kuaidadi.com,ct.xiaojukeji.com,conf.diditaxi.com.cn,mbs.boc.cn,mobile-api.adguard.org,nga.178.com,list-app-m.i4.cn,oauth.secure.pixiv.net,cdn.133.cn,*.baidu.com,*mbasecc.b*s.cmbchina.com,intellicc.b*s.cmbchina.com,ndstatic.cdn.bcebos.com,staticsns.cdn.bcebos.com,issuecdn.baidupcs.com,dss0.bdstatic.com,-imerres.baidu.com
