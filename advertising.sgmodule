@@ -10,8 +10,8 @@ DOMAIN-SUFFIX,feed-image.baidu.com,REJECT
 DOMAIN-SUFFIX,pic.yupoo.com,REJECT-DICT
 # > 滴滴
 DOMAIN-SUFFIX,gwp.xiaojukeji.com,REJECT-DROP
-ip-cidr,123.207.209.39/32,REJECT-DROP
-ip-cidr,123.207.209.60/32,REJECT-DROP
+ip-cidr,123.207.209.39/32,REJECT-DROP,no-resolve
+ip-cidr,123.207.209.60/32,REJECT-DROP,no-resolve
 [Script]
 # > PIXIV论坛@ddgksf2013
 pixivAds=type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,script-path=https://github.com/ddgksf2013/Scripts/raw/master/pixivAds.js
@@ -107,7 +107,7 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 # > 拼多多
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
 # > 虎牙直播
- ^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ url reject
+^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ url reject
 ^https?:\/\/business\.msstatic\.com\/advertiser\/material url reject
 ^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ url reject-img
 ^https?://live-ads\.huya\.com/live/getAllEntrance.*$ url reject-dict
