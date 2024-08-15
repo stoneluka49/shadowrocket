@@ -2,7 +2,7 @@
 #!desc=转换自其他大佬规则
 [Rule]
 # > 12306
-DOMAIN-SUFFIX,mobile.12306.cn,PROXY
+#DOMAIN-SUFFIX,mobile.12306.cn,PROXY
 #NGA论坛
 DOMAIN-SUFFIX,g1.tagtic.cn,REJECT
 DOMAIN-SUFFIX,adlog.tagtic.cn,REJECT
