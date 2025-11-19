@@ -84,10 +84,6 @@ AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/
 ^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad url reject-200
 # > 百度网盘_活动推广@ddgksf2013
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-200
-# > 百度网盘_会员权益@ddgksf2013
-^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
-# 微信小程序个人中心净化 感谢【TEXAS】分享
-^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js
 # > 滴滴青桔
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) url reject-200
 ^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api url reject-200
